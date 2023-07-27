@@ -10,11 +10,9 @@ $phone = '09218248954';
 $email = 'admin@admin.admin';
 $password = md5('admin');
 $profile = 'profile.jpg';
-$access = 1;
 $is_active = 1;
-$status = 1;
 
-$user->add($name, $family, $username, $phone, $email, $password, $profile, $access, $is_active, $status);
+$user->add($name, $family, $username, $phone, $email, $password, $profile, $is_active);
 
 header('Location: ./');
 die;
