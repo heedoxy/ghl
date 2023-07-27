@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/bootstrap/autoload.php';
-$title = 'گزارشات ورود';
+$title = 'Logs';
 $main_url = "log.php";
 $list_url = "log.php";
 
@@ -18,12 +18,12 @@ $counter = 1;
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>کاربر</th>
-                        <th>فعالیت</th>
-                        <th>سیستم عامل</th>
-                        <th>مرورگر</th>
-                        <th>شناسه</th>
-                        <th>تاریخ ثبت</th>
+                        <th>user</th>
+                        <th>action</th>
+                        <th>os</th>
+                        <th>browser</th>
+                        <th>ip</th>
+                        <th>created at</th>
                     </tr>
                     </thead>
                     <tbody>

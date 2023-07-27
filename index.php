@@ -1,6 +1,6 @@
 <?php require_once __DIR__ . '/bootstrap/autoload.php'; ?>
 <?php
-$title = 'داشبورد';
+$title = 'Dashboard';
 ?>
 <?php require_once __DIR__ . '/layout/header.php'; ?>
 <!-- begin::main content -->

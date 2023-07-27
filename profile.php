@@ -1,7 +1,7 @@
 <?php require_once __DIR__ . '/bootstrap/autoload.php'; ?>
 <?php
 
-$title = 'حساب کاربری';
+$title = 'Profile';
 $database = new Database();
 
 if (isset($_POST['submit'])) {
@@ -22,43 +22,42 @@ if (isset($_POST['submit'])) {
 
             <div class="card">
                 <div class="card-body">
-                    <h6 class="card-title">نمای کلی</h6>
                     <form method="post">
 
                         <div class="form-group">
-                            <label for="username">نام کاربری</label>
+                            <label for="username">username</label>
                             <input type="text" class="form-control" id="username" name="username"
-                                   placeholder="نام کاربری" disabled>
+                                   placeholder="username" disabled>
                         </div>
 
                         <div class="form-group">
-                            <label for="name">نام</label>
+                            <label for="name">name</label>
                             <input type="text" class="form-control" id="name" name="name"
-                                   placeholder="نام">
+                                   placeholder="name">
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">شماره تماس</label>
+                            <label for="phone">phone</label>
                             <input type="text" class="form-control" id="phone" name="phone"
-                                   placeholder="شماره تماس">
+                                   placeholder="phone">
                         </div>
 
                         <div class="form-group">
-                            <label for="email">آدرس ایمیل</label>
+                            <label for="email">email</label>
                             <input type="email" class="form-control" id="email" name="email"
-                                   placeholder="ایمیل">
+                                   placeholder="email">
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleFormControlFile1">تصویر پروفایل</label>
+                            <label for="exampleFormControlFile1">Profile image</label>
                             <input type="file" class="form-control-file" id="exampleFormControlFile1">
                             <small id="emailHelp" class="form-text text-muted">
-                                برای انتخاب پروفایل لطفا از تصاویر با نسبت 1 به 1 استفاده کنید.
+                                use 1:1 aspect ratio
                             </small>
                         </div>
 
                         <button type="submit" name="submit" class="btn btn-primary float-left">
-                            ذخیره تغییرات
+                            Save
                         </button>
                     </form>
                 </div>

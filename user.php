@@ -16,7 +16,7 @@ if (posted('edit')) {
     if (! $record) go($list_url);
 }
 
-$title = ($edit ? 'ویرایش' : 'ثبت') . ' لنج ';
+$title = ($edit ? 'edit' : 'add new') . ' user ';
 
 if (posted('submit')) {
 
@@ -27,12 +27,12 @@ if (posted('submit')) {
     $is_active = request('is_active');
 
     if ($user->exist_phone($phone, $id)) {
-        error("شماره تماس تکراری میباشد");
+        error("phone number is repeated");
         go('./user-list.php');
     }
 
     if ($user->exist_email($email, $id)) {
-        error("ایمیل تکراری میباشد");
+        error("email is repeated");
         go('./user-list.php');
     }
 
@@ -44,7 +44,7 @@ if (posted('submit')) {
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
         $extensions_arr = array("jpg", "jpeg", "png", "gif");
         if (in_array($imageFileType, $extensions_arr)) {
-            error('فرمت فایل انتخاب شده مجاز نمیباشد.');
+            error('the selected file format is not allowed.');
             go("$main_url?edit=$id");
         }
         $name = token(10) . "." . $imageFileType;
@@ -62,7 +62,7 @@ if (posted('submit')) {
         $password = md5($password);
 
         if ($user->exist_username($username, $id)) {
-            error("نام کاربری تکراری میباشد");
+            error("username is repeated");
             go('./user-list.php');
         }
 
@@ -86,36 +86,30 @@ if (posted('submit')) {
                         <form role="form" action="" method="post">
 
                             <div class="form-group">
-                                <label for="username">نام کاربری</label>
+                                <label for="username">username</label>
                                 <input type="text" class="form-control" name="username" id="username"
                                        value="<?= ($edit) ? $record->username : '' ?>"
                                     <?= $edit ? "disabled" : "required" ?>>
-                                <small class="form-text text-danger">
-                                    دقت شود بعد از ثبت نام کاربر امکان ویرایش نام کاربری وجود ندارد.
-                                </small>
                             </div>
 
                             <?php if (!$edit) { ?>
                                 <div class="form-group">
-                                    <label for="password">رمز عبور اولیه</label>
+                                    <label for="password">password</label>
                                     <input type="text" class="form-control" name="password" id="password" required>
-                                    <small class="form-text text-muted">
-                                        برای ویرایش کاربر باید از طریق پنل خود اقدام کند.
-                                    </small>
                                 </div>
                             <?php } ?>
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="name">نام</label>
+                                        <label for="name">name</label>
                                         <input type="text" class="form-control" name="name" id="name"
                                                value="<?= ($edit) ? $record->name : '' ?>" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="family">نام خانوادگی</label>
+                                        <label for="family">family</label>
                                         <input type="text" class="form-control" name="family" id="family"
                                                value="<?= ($edit) ? $record->family : '' ?>" required>
                                     </div>
@@ -125,45 +119,32 @@ if (posted('submit')) {
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="phone">شماره تماس</label>
+                                        <label for="phone">phone</label>
                                         <input type="text" class="form-control" name="phone" id="phone"
                                                value="<?= ($edit) ? $record->phone : '' ?>" required>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="email">ایمیل</label>
+                                        <label for="email">email</label>
                                         <input type="email" class="form-control" name="email" id="email"
                                                value="<?= ($edit) ? $record->email : '' ?>" required>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="form-group ">
-                                <label for="access">سطح دسترسی </label>
-                                <select class="form-control " name="access" id="access" required>
-                                    <option value="0" <?= $edit && $record->access == 0 ? 'selected' : '' ?>>
-                                        کاربر عادی
-                                    </option>
-                                    <option value="1" <?= $edit && $record->access == 1 ? 'selected' : '' ?>>
-                                        مدیر کل
-                                    </option>
-                                </select>
-                            </div>
-
                             <hr class="my-4">
 
-                            <div class="form-group float-left">
-                                <label for="is_active"></label>
+                            <div class="form-group float-right">
                                 <input name="is_active" id="is_active" type="checkbox"
                                        value="1" <?= $edit && $record->is_active == 0 ? "" : "checked" ?>>
-                                <label>فعال</label>
+                                <label for="is_active">active</label>
                             </div>
 
-                            <button type="submit" name="submit" class="btn btn-primary float-right ml-2">
-                                ذخیره تغییرات
+                            <button type="submit" name="submit" class="btn btn-primary float-left mr-2">
+                                Save
                             </button>
-                            <a href="<?= $list_url ?>" class="btn btn-secondary  float-right">بازگشت به لیست</a>
+                            <a href="<?= $list_url ?>" class="btn btn-secondary  float-left">Back</a>
 
                         </form>
                     </div>

@@ -16,12 +16,12 @@ if (posted('submit')) {
 
     if ($id) {
         $auth->set($id);
-        success("ورود به سیستم");
-        $log->add("ورود به سیستم");
+        success("login");
+        $log->add("login");
         go('./');
     }
 
-    error("نام کاربری و یا رمز عبور اشتباه میباشد.");
+    error("username or password is wrong");
     go('./login.php');
 }
 ?>
@@ -33,7 +33,7 @@ if (posted('submit')) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> سامانه مدیریت کشتی</title>
+    <title>CRM</title>
 
     <!-- Favicon -->
     <link rel="shortcut icon" href="public/media/image/favicon.png">
@@ -50,6 +50,8 @@ if (posted('submit')) {
 <style>
     body {
         background: url(".//public/media/background.webp") white;
+        direction: ltr;
+        text-align: left;
         background-attachment: fixed;
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -81,20 +83,20 @@ if (posted('submit')) {
     <!-- ./ logo -->
 
 
-    <h5>ورود به سیستم :)</h5>
+    <h5>CRM</h5>
 
     <!-- form -->
     <form method="post">
         <div class="form-group">
-            <input type="text" class="form-control text-left" name="username"
-                   placeholder="شماره موبایل، ایمیل، نام کاربری"
+            <input type="text" class="form-control" name="username"
+                   placeholder="username, email, phone"
                    dir="ltr" required="" autocomplete="off" autofocus="">
         </div>
         <div class="form-group">
-            <input type="password" class="form-control text-left" name="password" placeholder="رمز عبور" dir="ltr"
+            <input type="password" class="form-control" name="password" placeholder="password" dir="ltr"
                    autocomplete="off" required="">
         </div>
-        <button type="submit" name="submit" class="btn btn-primary btn-block">ورود</button>
+        <button type="submit" name="submit" class="btn btn-primary btn-block">login</button>
 
     </form>
     <!-- ./ form -->

@@ -2,7 +2,7 @@
 
 class Auth extends Database
 {
-    protected $session = 'xyz_user_id';
+    protected $session = 'ghl_user_id';
 
     public function check($username, $password)
     {

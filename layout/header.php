@@ -3,7 +3,7 @@ require_once __DIR__ . '/../bootstrap/autoload.php';
 
 $auth = new Auth();
 $user = new User();
-$title = $title ?? config("APP_NAME", "سامانه مدیریت کشتی");
+$title = $title ?? config("APP_NAME", "CRM");
 
 if ($auth->guest()) {
     go('./login.php');
@@ -81,7 +81,7 @@ $directory = config('PROFILE_DIRECTORY');
             <!-- begin::breadcrumb -->
             <nav aria-label="breadcrumb">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="./">خانه</a></li>
+                    <li class="breadcrumb-item"><a href="./">Home</a></li>
                     <li class="breadcrumb-item active" aria-current="page"><?= $title ?></li>
                 </ol>
             </nav>

@@ -5,7 +5,7 @@ $auth = new Auth();
 
 if (! $auth->guest()) {
     $auth->logout();
-    warning('خروج از سیستم');
+    warning('logout');
 }
 
 go('./login.php');

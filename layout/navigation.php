@@ -2,26 +2,25 @@
 require_once __DIR__ . '/../bootstrap/autoload.php';
 $auth = new Auth();
 $user = new User();
-$access = $user->me()->access;
 ?>
 <!-- begin::navigation -->
 <div class="navigation">
     <div class="navigation-icon-menu">
         <ul>
-            <li data-toggle="tooltip" title="داشبورد" class="active">
-                <a href="#navigationDashboards" title="داشبوردها">
+            <li data-toggle="tooltip" title="Dashboard" class="active">
+                <a href="#navigationDashboards" title="Dashboard">
                     <i class="icon ti-pie-chart"></i>
                     <span class="badge badge-warning">2</span>
                 </a>
             </li>
         </ul>
         <ul>
-            <li data-toggle="tooltip" title="ویرایش پروفایل">
+            <li data-toggle="tooltip" title="Profile">
                 <a href="./profile.php" class="go-to-page">
                     <i class="icon ti-settings"></i>
                 </a>
             </li>
-            <li data-toggle="tooltip" title="خروج">
+            <li data-toggle="tooltip" title="logout">
                 <a href="./logout.php" class="go-to-page">
                     <i class="icon ti-power-off"></i>
                 </a>
@@ -31,17 +30,17 @@ $access = $user->me()->access;
     <div class="navigation-menu-body">
         <ul id="navigationDashboards" class="navigation-active">
             <li>
-                <a href="./">داشبورد</a>
+                <a href="./">Dashboard</a>
             </li>
             <li>
             <li>
-                <a href="./log.php">گزارشات سیستم</a>
+                <a href="./log.php">Logs</a>
             </li>
             <li>
-                <a href="./user-list.php">کاربران سیستم</a>
+                <a href="./user-list.php">Users</a>
             </li>
             <li>
-                <a href="./profile.php">حساب کاربری</a>
+                <a href="./profile.php">Profile</a>
             </li>
         </ul>
     </div>

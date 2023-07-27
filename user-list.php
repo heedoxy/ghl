@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/bootstrap/autoload.php';
-$title = 'کاربران سیستم';
+$title = 'users';
 $main_url = "user.php";
 $list_url = "user-list.php";
 
@@ -25,8 +25,8 @@ $directory = config('PROFILE_DIRECTORY');
 
         <button type="button" class="btn btn-primary btn-uppercase mb-3">
             <a href="<?= $main_url ?>" class="text-white">
-                <i class="ti-plus m-r-5"></i>
-                ثبت کاربر جدید
+                <i class="ti-plus m-l-5"></i>
+                add new user
             </a>
         </button>
 
@@ -36,10 +36,10 @@ $directory = config('PROFILE_DIRECTORY');
                     <thead>
                     <tr>
                         <th>#</th>
-                        <th>نام</th>
-                        <th>شماره موبایل</th>
-                        <th>ایمیل</th>
-                        <th>مدیریت</th>
+                        <th>name</th>
+                        <th>phone</th>
+                        <th>email</th>
+                        <th>manage</th>
                     </tr>
                     </thead>
                     <tbody>

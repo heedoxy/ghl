@@ -3831,7 +3831,6 @@ textarea {
 	margin-bottom: 0;
 	border-bottom: 1px solid #e1e1e1;
 	line-height: 1.85;
-	font-family: "secondary-font", "primary-font", "segoe ui", "tahoma";
 }
 
 .card .card-footer {
@@ -4258,7 +4257,6 @@ textarea {
 }
 
 body {
-	font-family: "primary-font", "segoe ui", "tahoma";
 	direction: ltr;
 	text-align: left;
 	position: relative;
@@ -4277,14 +4275,6 @@ body.no-scroll {
 	direction: ltr;
 }
 
-.primary-font {
-	font-family: "primary-font", "segoe ui", "tahoma" !important;
-}
-
-.secondary-font {
-	font-family: "secondary-font", "primary-font", "segoe ui", "tahoma" !important;
-}
-
 h1,
 h2,
 h3,
@@ -4292,7 +4282,6 @@ h4,
 h5,
 h6 {
 	line-height: 1.85;
-	font-family: "secondary-font", "primary-font", "segoe ui", "tahoma";
 }
 
 p {
@@ -11548,4 +11537,8 @@ body.dark .ui-datepicker select {
     background-color: #222538;
     color: inherit;
     border-color: #404356;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+	padding-right: 0.5rem !important;
 }
