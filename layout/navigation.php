@@ -40,6 +40,12 @@ $user = new User();
                 <a href="./user-list.php">Users</a>
             </li>
             <li>
+                <a href="./section-list.php">Sections</a>
+            </li>
+            <li>
+                <a href="./email-list.php">Emails</a>
+            </li>
+            <li>
                 <a href="./profile.php">Profile</a>
             </li>
         </ul>

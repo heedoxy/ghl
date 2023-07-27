@@ -14,5 +14,8 @@ require_once __DIR__ . '/../application/Database.php';
 require_once __DIR__ . '/../application/Auth.php';
 require_once __DIR__ . '/../application/User.php';
 require_once __DIR__ . '/../application/Log.php';
+require_once __DIR__ . '/../application/Section.php';
+require_once __DIR__ . '/../application/Email.php';
+require_once __DIR__ . '/../application/Permission.php';
 
 
