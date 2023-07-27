@@ -135,15 +135,7 @@ if (!function_exists('error')) {
 if (!function_exists('success_saved')) {
     function success_saved($message = null)
     {
-        $message = $message ?? 'با موفقیت ذخیره شد.';
-        success($message);
-    }
-}
-
-if (!function_exists('success_edited')) {
-    function success_edited($message = null)
-    {
-        $message = $message ?? 'با موفقیت به روز رسانی شد.';
+        $message = $message ?? 'saved';
         success($message);
     }
 }
@@ -151,7 +143,7 @@ if (!function_exists('success_edited')) {
 if (!function_exists('success_removed')) {
     function success_removed($message = null)
     {
-        $message = $message ?? 'با موفقیت حذف شد شد.';
+        $message = $message ?? 'removed';
         success($message);
     }
 }
@@ -159,7 +151,7 @@ if (!function_exists('success_removed')) {
 if (!function_exists('success_edited')) {
     function success_edited($message = null)
     {
-        $message = $message ?? 'اطلاعات مورد نظر با موفقیت به روز رسانی شد';
+        $message = $message ?? 'edited';
         success($message);
     }
 }
