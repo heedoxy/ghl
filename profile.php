@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
                             </small>
                         </div>
 
-                        <button type="submit" name="submit" class="btn btn-primary float-right">
+                        <button type="submit" name="submit" class="btn btn-primary float-left">
                             ذخیره تغییرات
                         </button>
                     </form>

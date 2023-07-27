@@ -4259,7 +4259,8 @@ textarea {
 
 body {
 	font-family: "primary-font", "segoe ui", "tahoma";
-	direction: rtl;
+	direction: ltr;
+	text-align: left;
 	position: relative;
 	height: 100%;
 	background: #eaeaea;
@@ -8688,7 +8689,7 @@ button.toast-close-button {
 }
 
 main.main-content {
-	margin-right: 300px;
+	margin-left: 300px;
 	-webkit-transition: margin-right .2s;
 	-o-transition: margin-right .2s;
 	-moz-transition: margin-right .2s;
@@ -9184,7 +9185,7 @@ body.form-membership .form-wrapper hr {
 	-webkit-justify-content: center;
 	-moz-box-pack: center;
 	-ms-flex-pack: center;
-	justify-content: right;
+	justify-content: left;
 	padding-right: 8px;
 }
 
@@ -9430,7 +9431,7 @@ body.form-membership .form-wrapper hr {
 
 .navigation {
 	position: fixed;
-	right: 0;
+	left: 0;
 	height: -webkit-calc(100vh - 90px);
 	height: -moz-calc(100vh - 90px);
 	height: calc(100vh - 90px);
@@ -9444,9 +9445,9 @@ body.form-membership .form-wrapper hr {
 .navigation .navigation-icon-menu {
 	height: 100%;
 	width: 60px;
-	float: right;
+	float: left;
 	background-color: #2d2c4e;
-	margin-right: 15px;
+	margin-left: 15px;
 	margin-bottom: 15px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -9542,7 +9543,7 @@ body.form-membership .form-wrapper hr {
 	content: "";
 	font-weight: 700;
 	position: absolute;
-	right: 52px;
+	left: 52px;
 	display: block;
 	background: white;
 	-webkit-border-radius: 5px;
@@ -11032,7 +11033,7 @@ body.dark .nav a.nav-link:not(.active):active {
 	main.main-content {
 		padding: 1rem;
 		padding-top: 0;
-		margin-right: 0 !important;
+		margin-left: 0 !important;
 	}
 
 	.card {

@@ -24,7 +24,10 @@ $directory = config('PROFILE_DIRECTORY');
 
 
         <button type="button" class="btn btn-primary btn-uppercase mb-3">
-            <a href="<?= $main_url ?>" class="text-white"><i class="ti-plus m-r-5"></i> ثبت کاربر جدید</a>
+            <a href="<?= $main_url ?>" class="text-white">
+                <i class="ti-plus m-r-5"></i>
+                ثبت کاربر جدید
+            </a>
         </button>
 
         <div class="card">
