@@ -11542,3 +11542,11 @@ body.dark .ui-datepicker select {
 .breadcrumb-item+.breadcrumb-item::before {
 	padding-right: 0.5rem !important;
 }
+
+.select2.select2-container .select2-search--inline .select2-search__field {
+	text-align: left;
+}
+
+.select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__choice, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-selection__placeholder, .select2-container--default[dir="rtl"] .select2-selection--multiple .select2-search--inline {
+	 float: left !important;
+}
