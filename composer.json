@@ -1,0 +1,14 @@
+{
+    "name": "heedo/ship",
+    "autoload": {
+        "psr-4": {
+            "Heedo\\Ship\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "heedo group"
+        }
+    ],
+    "require": {}
+}
